@@ -43,14 +43,14 @@ def main(n, op):
         * n1 <operation> n2 == N
     """
 
-    anagram_pairs = find_anagram_sum_pairs(n, op, progress_bar=True)
+    anagram_pairs = find_anagram_pairs(n, op, progress_bar=True)
     op_str = " {} ".format(op)
 
     for pairs in anagram_pairs:
         print(" = ".join([op_str.join(map(str, pair)) for pair in pairs]))
 
 
-def find_anagram_sum_pairs(n, op, progress_bar=False):
+def find_anagram_pairs(n, op, progress_bar=False):
     """
     Find all distinct pairs ``(n1, n2)``, ``(m1, m2)`` of pairs of positive integers such that:
 
