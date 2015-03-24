@@ -123,7 +123,7 @@ def are_anagrams(pair1, pair2, op):
     n1, n2 = pair1
     m1, m2 = pair2
 
-    num_strs = [p.number_to_words(x) for x in [n1, n2, m1, m2]]
+    num_strs = [p.number_to_words(x, andword='') for x in [n1, n2, m1, m2]]
 
     first = "{} {} {}".format(num_strs[0], ops[op]["name"], num_strs[1])
     second = "{} {} {}".format(num_strs[2], ops[op]["name"], num_strs[3])
